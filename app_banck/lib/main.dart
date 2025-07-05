@@ -1,5 +1,5 @@
-import 'package:app_banck/formTransference.dart';
-import 'package:app_banck/listTransference.dart';
+import 'package:app_banck/TransferenceService/FormTransference.dart';
+import 'package:app_banck/TransferenceService/ListTransference.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(Banck());
@@ -9,13 +9,11 @@ class Banck extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-    home: Scaffold(
-      backgroundColor: const Color.fromARGB(240, 133, 97, 233),
-      body: formTransference(),
-     
-     
-    ),
-  );
+    return MaterialApp(
+      theme: ThemeData(
+      primaryColor: const Color.fromARGB(240, 133, 97, 233),
+      ),
+      home:  ListTransference(), 
+    );
   }
 }
